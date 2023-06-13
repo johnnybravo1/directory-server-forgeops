@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("johnnynoble/directory-server-forgeops")
+        app = docker.build("johnnynoble/directory-server-forgeops", "--pull .")
     }
 
     stage('Test image') {
